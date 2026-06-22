@@ -927,8 +927,8 @@ LP.CharacterAdded:Connect(applyGrapplePhysicsBypass)
 
 local function fireGrappleOnceMouseFree()
     local char = LP.Character
-    local hum = char and char:FindFirstChildOfClass("Humanoid")
-    local hrp = char and char:FindFirstChild("HumanoidRootPart")
+    local hum  = char and char:FindFirstChildOfClass("Humanoid")
+    local hrp  = char and char:FindFirstChild("HumanoidRootPart")
     if not hum or not hrp then return false end
 
     local hook = findToolLocal("Grapple Hook")
@@ -938,8 +938,8 @@ local function fireGrappleOnceMouseFree()
         task.wait(0.03)
     end
 
-    local fakeTargetPos = hrp.Position + hrp.CFrame.LookVector * 50
-    PlayerMouse.Hit = { Position = fakeTargetPos }
+    local fakeTargetPos = hrp.Position + Vector3.new(0, -50, 0)
+    PlayerMouse.Hit    = { Position = fakeTargetPos }
     PlayerMouse.Target = workspace.Terrain
 
     local ok = pcall(function()
@@ -1788,6 +1788,8 @@ UserInputService.InputEnded:Connect(function(i)
         draggingPanel = false
     end
 end)
+
+local waitingTpKey = false
 
 UserInputService.InputBegan:Connect(function(input, gpe)
     if gpe then return end
