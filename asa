@@ -103,17 +103,15 @@ local BASE_POINTS = {
 }
 
 local BASE_CENTERS = {}
-do
-	for baseName, list in pairs(BASE_POINTS) do
-		local sum = Vector3.new()
-		local n = 0
-		for _, e in ipairs(list) do
-			sum += e.pos
-			n += 1
-		end
-		if n > 0 then
-			BASE_CENTERS[baseName] = sum / n
-		end
+for baseName, list in pairs(BASE_POINTS) do
+	local sum = Vector3.new()
+	local n = 0
+	for _, e in ipairs(list) do
+		sum += e.pos
+		n += 1
+	end
+	if n > 0 then
+		BASE_CENTERS[baseName] = sum / n
 	end
 end
 
@@ -560,53 +558,53 @@ local function getBestBasePointInBase(brainBaseName, brainPos)
 	local char = LP.Character
 	local hrp  = char and char:FindFirstChild("HumanoidRootPart")
 	local startPos = hrp and hrp.Position or brainPos
-	local MAX_Y_DIFF = 6
+
+	local minHeightDiff = math.huge
+	for _, entry in ipairs(baseList) do
+		local diff = math.abs(entry.pos.Y - brainPos.Y)
+		if diff < minHeightDiff then
+			minHeightDiff = diff
+		end
+	end
+
 	local candidates = {}
 	for _, entry in ipairs(baseList) do
-		local pos = entry.pos
-		local yDiff = math.abs(brainPos.Y - pos.Y)
-		if yDiff <= MAX_Y_DIFF then
-			local dx = brainPos.X - pos.X
-			local dz = brainPos.Z - pos.Z
-			local horizDist = math.sqrt(dx*dx + dz*dz)
-			local scoreNear = horizDist + yDiff * 3
+		local yDiff = math.abs(entry.pos.Y - brainPos.Y)
+		if yDiff <= minHeightDiff + 1.5 then
+			local dx = brainPos.X - entry.pos.X
+			local dz = brainPos.Z - entry.pos.Z
+			local horiz = math.sqrt(dx*dx + dz*dz)
+			local nearScore = horiz + yDiff * 5
 			table.insert(candidates, {
 				entry = entry,
-				scoreNear = scoreNear,
-				yDiff = yDiff,
+				nearScore = nearScore,
 			})
 		end
 	end
 	if #candidates == 0 then
 		for _, entry in ipairs(baseList) do
-			local pos = entry.pos
-			local yDiff = math.abs(brainPos.Y - pos.Y)
-			local dx = brainPos.X - pos.X
-			local dz = brainPos.Z - pos.Z
-			local horizDist = math.sqrt(dx*dx + dz*dz)
-			local scoreNear = horizDist + yDiff * 10
 			table.insert(candidates, {
 				entry = entry,
-				scoreNear = scoreNear,
-				yDiff = yDiff,
+				nearScore = (brainPos - entry.pos).Magnitude,
 			})
 		end
 	end
+
 	table.sort(candidates, function(a,b)
-		return a.scoreNear < b.scoreNear
+		return a.nearScore < b.nearScore
 	end)
-	local maxCandidates = 4
-	local bestScore, bestEntry
-	for i = 1, math.min(maxCandidates, #candidates) do
+
+	local bestEntry, bestScore
+	local limit = math.min(6, #candidates)
+	for i = 1, limit do
 		local c = candidates[i]
-		local pos = c.entry.pos
-		local pathDist = estimatePathDistance(startPos, pos)
-		local score = pathDist
-		if not bestScore or score < bestScore then
-			bestScore = score
+		local pd = estimatePathDistance(startPos, c.entry.pos)
+		if not bestScore or pd < bestScore then
+			bestScore = pd
 			bestEntry = c.entry
 		end
 	end
+
 	return bestEntry
 end
 
@@ -842,6 +840,26 @@ local function getFrontOfBrainrot(hrp, brainPos)
 		target = Vector3.new(target.X, brainPos.Y + 0.5, target.Z)
 	end
 	return target
+end
+
+local function quickDoubleTpToBrainrot(sel)
+	local brainPos = getBrainrotPosUnified(sel)
+	if not brainPos then return end
+
+	for i = 1, 2 do
+		local char = LP.Character
+		local hrp  = char and char:FindFirstChild("HumanoidRootPart")
+		local hum  = char and char:FindFirstChildOfClass("Humanoid")
+		if not hrp then return end
+		equipAnyCarpet()
+		vZeroLocal(hrp)
+		local pos = hrp.Position
+		local adjusted = Vector3.new(brainPos.X, pos.Y, brainPos.Z)
+		hrp.CFrame = CFrame.new(adjusted + Vector3.new(0,0.5,0))
+		vZeroLocal(hrp)
+		softStabilizeHumanoid(hum)
+		task.wait(0.3)
+	end
 end
 
 local function AfterClone_ThirdFloorAware(savedSel)
@@ -1110,7 +1128,7 @@ local function doVelocityTP()
 		if mode == "Velocity" then
 			velocityTpToBrainrot(savedSel)
 		elseif mode == "TP" then
-			instantVelocityTpToBrainrot(savedSel)
+			quickDoubleTpToBrainrot(savedSel)
 		else
 			AfterClone_ThirdFloorAware(savedSel)
 		end
