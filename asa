@@ -831,7 +831,7 @@ local function velWalkTo(hrp, targetPos, walkSpeed)
 end
 
 local function getFrontOfBrainrot(hrp, brainPos)
-	local offsetDist = 3
+	local offsetDist = 11
 	local look = hrp and hrp.CFrame.LookVector or Vector3.new(0,0,-1)
 	local target = brainPos - look * offsetDist
 	if hrp then
@@ -876,7 +876,7 @@ local function AfterClone_ThirdFloorAware(savedSel)
 	softStabilizeHumanoid(hum)
 	if isThirdFloor(brainPos) and ThirdFloorPlatform and ThirdFloorPlatform.CanCollide then
 		local airPos = Vector3.new(brainPos.X, brainPos.Y - 7.5, brainPos.Z)
-		local target = airPos
+		local target = airPos - Vector3.new(0, 2, 0)
 		local walkSpeed = Config.TpSettings.WalkToBrainrotSpd or 50
 		local done = false
 		local conn
