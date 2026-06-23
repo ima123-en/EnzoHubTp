@@ -47,13 +47,13 @@ local BASE_POINTS = {
 	Base1 = {
 		{pos = Vector3.new(-483.615, -5.310, 194.835), look = Vector3.new(-0.025, -0.000,  1.000)},
 		{pos = Vector3.new(-484.072, 14.589, 195.437), look = Vector3.new( 0.008, -0.000,  1.000)},
-		{pos = Vector3.new(-478.334, 19.500, 220.489), look = Vector3.new(-0.998, 0.000, -0.070)},
+		{pos = Vector3.new(-478.334, 18,      220.489), look = Vector3.new(-0.998, 0.000, -0.070)},
 		{pos = Vector3.new(-476.434, -4.545, 220.339), look = Vector3.new(-1.000,-0.000, -0.021)},
 	},
 	Base2 = {
 		{pos = Vector3.new(-335.548, -5.310, -18.819), look = Vector3.new( 0.001,-0.000,  1.000)},
 		{pos = Vector3.new(-335.968, 14.655, -18.763), look = Vector3.new(-0.009,-0.000,  1.000)},
-		{pos = Vector3.new(-340.770, 19.500,   7.819), look = Vector3.new( 1.000, 0.000, -0.020)},
+		{pos = Vector3.new(-340.770, 18,        7.819), look = Vector3.new( 1.000, 0.000, -0.020)},
 		{pos = Vector3.new(-335.362, 14.655,  32.267), look = Vector3.new(-0.018, 0.000, -1.000)},
 		{pos = Vector3.new(-335.597, -5.310,  31.984), look = Vector3.new( 0.007,-0.000, -1.000)},
 		{pos = Vector3.new(-342.770, -4.545,   6.882), look = Vector3.new( 0.998, 0.000,  0.059)},
@@ -61,7 +61,7 @@ local BASE_POINTS = {
 	Base3 = {
 		{pos = Vector3.new(-335.056, -4.730,  88.361), look = Vector3.new(-0.053,-0.000,  0.999)},
 		{pos = Vector3.new(-335.484, 14.589,  88.365), look = Vector3.new( 0.009,-0.000,  1.000)},
-		{pos = Vector3.new(-340.686, 19.500, 113.545), look = Vector3.new( 0.996,-0.000,  0.091)},
+		{pos = Vector3.new(-340.686, 18,      113.545), look = Vector3.new( 0.996,-0.000,  0.091)},
 		{pos = Vector3.new(-334.037, 14.589, 138.982), look = Vector3.new( 0.016, 0.000, -1.000)},
 		{pos = Vector3.new(-334.729, -5.310, 138.934), look = Vector3.new(-0.018, 0.000, -1.000)},
 		{pos = Vector3.new(-342.976, -4.691, 114.290), look = Vector3.new( 1.000, 0.000, -0.003)},
@@ -69,19 +69,19 @@ local BASE_POINTS = {
 	Base4 = {
 		{pos = Vector3.new(-335.378, -5.310, 195.301), look = Vector3.new(-0.007, 0.000,  1.000)},
 		{pos = Vector3.new(-334.909, 14.589, 195.104), look = Vector3.new(-0.014,-0.000,  1.000)},
-		{pos = Vector3.new(-340.955, 19.500, 221.001), look = Vector3.new( 1.000, 0.000,  0.021)},
+		{pos = Vector3.new(-340.955, 18,      221.001), look = Vector3.new( 1.000, 0.000,  0.021)},
 		{pos = Vector3.new(-342.888, -4.610, 220.964), look = Vector3.new( 1.000, 0.000, -0.003)},
 	},
 	Base5 = {
 		{pos = Vector3.new(-484.222, -5.310, 195.304), look = Vector3.new( 0.028, 0.000,  1.000)},
 		{pos = Vector3.new(-484.333, 14.589, 195.090), look = Vector3.new(-0.021,-0.000,  1.000)},
-		{pos = Vector3.new(-478.365, 19.500, 220.752), look = Vector3.new(-1.000,-0.000,  0.006)},
+		{pos = Vector3.new(-478.365, 18,      220.752), look = Vector3.new(-1.000,-0.000,  0.006)},
 		{pos = Vector3.new(-476.401, -4.601, 220.614), look = Vector3.new(-1.000,-0.000,  0.019)},
 	},
 	Base6 = {
 		{pos = Vector3.new(-483.449, -5.310, 138.981), look = Vector3.new(-0.019,-0.000, -1.000)},
 		{pos = Vector3.new(-483.015, 14.655, 138.915), look = Vector3.new(-0.002,-0.000, -1.000)},
-		{pos = Vector3.new(-478.574, 19.500, 113.173), look = Vector3.new(-1.000,-0.000,  0.021)},
+		{pos = Vector3.new(-478.574, 18,      113.173), look = Vector3.new(-1.000,-0.000,  0.021)},
 		{pos = Vector3.new(-484.151, 14.655,  87.993), look = Vector3.new( 0.026,-0.000,  1.000)},
 		{pos = Vector3.new(-483.837, -5.310,  87.932), look = Vector3.new( 0.025, 0.000,  1.000)},
 		{pos = Vector3.new(-476.314, -4.545, 113.780), look = Vector3.new(-1.000, 0.000, -0.023)},
@@ -89,7 +89,7 @@ local BASE_POINTS = {
 	Base7 = {
 		{pos = Vector3.new(-483.090, -5.310,  32.215), look = Vector3.new(-0.027,-0.000, -1.000)},
 		{pos = Vector3.new(-483.202, 14.589,  32.072), look = Vector3.new( 0.027, 0.000, -1.000)},
-		{pos = Vector3.new(-478.055, 19.500,   6.638), look = Vector3.new(-1.000, 0.000, -0.004)},
+		{pos = Vector3.new(-478.055, 18,        6.638), look = Vector3.new(-1.000, 0.000, -0.004)},
 		{pos = Vector3.new(-483.909, 14.589, -19.057), look = Vector3.new(-0.008,-0.000,  1.000)},
 		{pos = Vector3.new(-482.949, -5.310, -19.079), look = Vector3.new(-0.025,-0.000,  1.000)},
 		{pos = Vector3.new(-476.441, -4.593,   6.513), look = Vector3.new(-1.000,-0.000,  0.006)},
@@ -97,7 +97,7 @@ local BASE_POINTS = {
 	Base8 = {
 		{pos = Vector3.new(-483.624, -5.310, -74.769), look = Vector3.new(-0.002, 0.000, -1.000)},
 		{pos = Vector3.new(-482.742, 14.655, -75.024), look = Vector3.new( 0.055, 0.000, -0.998)},
-		{pos = Vector3.new(-478.328, 19.500,-100.790), look = Vector3.new(-0.999,-0.000,  0.046)},
+		{pos = Vector3.new(-478.328, 18,     -100.790), look = Vector3.new(-0.999,-0.000,  0.046)},
 		{pos = Vector3.new(-476.109, -4.645,-100.723), look = Vector3.new(-1.000,-0.000, -0.002)},
 	},
 }
