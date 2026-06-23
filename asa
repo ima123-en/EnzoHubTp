@@ -130,11 +130,11 @@ local Config = {
 		LandingDelayV2    = 0.48,
 		TpMode            = "Front",
 		TpV2Speed         = 160,
-		TpGrappleSpeed    = 190,
+		TpGrappleSpeed    = 260,
 		TeleportMethod    = "Tween Teleport",
 		BaseSpeed100      = 80,
 		WalkToBrainrotSpd = 50,
-		CloneDelay        = 0.08,
+		CloneDelay        = 0.03,
 		TpToBrainrotMode  = "Walk",
 		FixPosTime        = 0.1,
 	},
@@ -711,15 +711,15 @@ local function placeCloneOnly()
 	vZeroLocal(hrp)
 	local cloner = EquipToolLP("Quantum Cloner")
 	if not cloner then return false end
-	task.wait(0.03)
+	task.wait(0.015)
 	pcall(function() cloner:Activate() end)
 	local cloneName = tostring(LP.UserId) .. "_Clone"
 	local clone
 	local t0 = tick()
-	while tick() - t0 < 4 do
+	while tick() - t0 < 1.5 do
 		clone = Workspace:FindFirstChild(cloneName)
 		if clone then break end
-		task.wait(0.05)
+		task.wait(0.03)
 	end
 	return clone ~= nil
 end
@@ -732,8 +732,8 @@ local function swapWithClone()
 	btn.Visible = true
 	if typeof(firesignal) == "function" then
 		local ok = pcall(function()
-			firesignal(btn.MouseButton1Click)
 			firesignal(btn.MouseButton1Down)
+			firesignal(btn.MouseButton1Click)
 			firesignal(btn.MouseButton1Up)
 		end)
 		if not ok then return false end
@@ -741,7 +741,7 @@ local function swapWithClone()
 		local inset = GuiService:GetGuiInset()
 		local pos   = btn.AbsolutePosition + btn.AbsoluteSize * 0.5
 		VirtualInputManager:SendMouseButtonEvent(pos.X+inset.X, pos.Y+inset.Y, 0, true,  game, 1)
-		task.wait(0.03)
+		task.wait(0.02)
 		VirtualInputManager:SendMouseButtonEvent(pos.X+inset.X, pos.Y+inset.Y, 0, false, game, 1)
 	end
 	return true
@@ -753,7 +753,7 @@ local function doCloneUnified()
 	local success = false
 	local ok = pcall(function()
 		if not placeCloneOnly() then return end
-		task.wait(0.15)
+		task.wait(0.05)
 		if not swapWithClone() then return end
 		success = true
 	end)
@@ -975,7 +975,7 @@ local function fireGrappleOnceMouseFree()
 	if not hook then return false end
 	if hook.Parent ~= char then
 		pcall(function() hum:EquipTool(hook) end)
-		task.wait(0.03)
+		task.wait(0.02)
 	end
 	local fakeTargetPos = hrp.Position + Vector3.new(0, -50, 0)
 	PlayerMouse.Hit    = { Position = fakeTargetPos }
@@ -995,23 +995,23 @@ local function doGrappleHookThenCarpetMove(destPos, facingDir)
 	local origChoice = Config.ToolChoice
 	if origChoice == "Grapple" then
 		fireGrappleOnceMouseFree()
-		task.wait(0.3)
+		task.wait(0.25)
 		Config.ToolChoice = "Carpet"
 	end
 	equipSelectedTpTool()
-	_G.VanishCarpetSpeed = Config.TpSettings.TpGrappleSpeed or 190
+	_G.VanishCarpetSpeed = Config.TpSettings.TpGrappleSpeed or 260
 	vZeroLocal(hrp)
 	local route = computeRoute(hrp.Position, destPos, facingDir)
-	local stopMove = velMoveThrough(hrp, route, Config.TpSettings.TpGrappleSpeed or 190)
+	local stopMove = velMoveThrough(hrp, route, Config.TpSettings.TpGrappleSpeed or 260)
 	local t0 = tick()
-	local timeout = 10
+	local timeout = 8
 	while tick() - t0 < timeout do
 		if not hrp or not hrp.Parent then break end
 		if (hrp.Position - destPos).Magnitude < 4 then
 			break
 		end
 		softStabilizeHumanoid(hum)
-		task.wait(0.03)
+		task.wait(0.02)
 	end
 	stopMove()
 	vZeroLocal(hrp)
@@ -1070,7 +1070,7 @@ local function doVelocityTP()
 	else
 		equipSelectedTpTool()
 		_G.VanishCarpetSpeed = (Config.ToolChoice or "Grapple") == "Grapple"
-			and (Config.TpSettings.TpGrappleSpeed or 190)
+			and (Config.TpSettings.TpGrappleSpeed or 260)
 			or (Config.TpSettings.TpV2Speed or 160)
 		vZeroLocal(hrp)
 		softStabilizeHumanoid(hum)
@@ -1078,14 +1078,14 @@ local function doVelocityTP()
 		local route = computeRoute(hrp.Position, destPos, facingDir)
 		local stopMove = velMoveThrough(hrp, route, speedOverride)
 		local t0 = tick()
-		local timeout = 10
+		local timeout = 8
 		while tick() - t0 < timeout do
 			if not hrp or not hrp.Parent then break end
 			if (hrp.Position - destPos).Magnitude < 4 then
 				break
 			end
 			softStabilizeHumanoid(hum)
-			task.wait(0.03)
+			task.wait(0.02)
 		end
 		stopMove()
 		vZeroLocal(hrp)
@@ -1110,12 +1110,12 @@ local function doVelocityTP()
 		softStabilizeHumanoid(_ahum)
 		pcall(function() _ahrp.Anchored = true end)
 	end
-	task.wait(Config.TpSettings.CloneDelay or 0.08)
+	task.wait(Config.TpSettings.CloneDelay or 0.03)
 	if _ahrp and _ahrp.Parent then pcall(function() _ahrp.Anchored = false end) end
 	softStabilizeHumanoid(_ahum)
 	local cloneOk = doCloneUnified()
 	if cloneOk then
-		task.wait(0.25)
+		task.wait(0.15)
 		local chr = LP.Character
 		local cHrp = chr and chr:FindFirstChild("HumanoidRootPart")
 		local cHum = chr and chr:FindFirstChildOfClass("Humanoid")
@@ -1308,7 +1308,7 @@ local function makeToolButton(text, key, xScale)
 		Config.ToolChoice        = key
 		Config.TpSettings.Tool   = GetCurrentTpToolName()
 		if key == "Grapple" then
-			_G.VanishCarpetSpeed = Config.TpSettings.TpGrappleSpeed or 190
+			_G.VanishCarpetSpeed = Config.TpSettings.TpGrappleSpeed or 260
 		else
 			_G.VanishCarpetSpeed = Config.TpSettings.TpV2Speed or 160
 		end
@@ -1326,7 +1326,7 @@ if not REAL_TOOL_NAMES[Config.ToolChoice] then
 	Config.ToolChoice = "Grapple"
 end
 if (Config.ToolChoice or "Grapple") == "Grapple" then
-	_G.VanishCarpetSpeed = Config.TpSettings.TpGrappleSpeed or 190
+	_G.VanishCarpetSpeed = Config.TpSettings.TpGrappleSpeed or 260
 else
 	_G.VanishCarpetSpeed = Config.TpSettings.TpV2Speed or 160
 end
@@ -1691,7 +1691,7 @@ makeSliderSettings(SettingsGui, 48, "Fly TP Speed", 80, 260,
 )
 
 makeSliderSettings(SettingsGui, 88, "Hook TP Speed", 120, 350,
-	function() return Config.TpSettings.TpGrappleSpeed or 190 end,
+	function() return Config.TpSettings.TpGrappleSpeed or 260 end,
 	function(v)
 		Config.TpSettings.TpGrappleSpeed = v
 		if (Config.ToolChoice or "Grapple") == "Grapple" then
@@ -1707,8 +1707,8 @@ makeSliderSettings(SettingsGui, 128, "Walk To Brainrot Speed", 20, 200,
 	function(v) return string.format("%d", v) end
 )
 
-makeSliderSettings(SettingsGui, 168, "Clone Delay", 0.02, 0.3,
-	function() return Config.TpSettings.CloneDelay or 0.08 end,
+makeSliderSettings(SettingsGui, 168, "Clone Delay", 0.01, 0.1,
+	function() return Config.TpSettings.CloneDelay or 0.03 end,
 	function(v) Config.TpSettings.CloneDelay = v end,
 	function(v) return string.format("%.2fs", v) end
 )
