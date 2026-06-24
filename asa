@@ -47,13 +47,13 @@ local BASE_POINTS = {
 	Base1 = {
 		{pos = Vector3.new(-483.615, -5.310, 194.835), look = Vector3.new(-0.025, -0.000,  1.000)},
 		{pos = Vector3.new(-484.072, 14.589, 195.437), look = Vector3.new( 0.008, -0.000,  1.000)},
-		{pos = Vector3.new(-478.334, 21.559, 220.489), look = Vector3.new(-0.998, 0.000, -0.070)},
+		{pos = Vector3.new(-478.334, 18,      220.489), look = Vector3.new(-0.998, 0.000, -0.070)},
 		{pos = Vector3.new(-476.434, -4.545, 220.339), look = Vector3.new(-1.000,-0.000, -0.021)},
 	},
 	Base2 = {
 		{pos = Vector3.new(-335.548, -5.310, -18.819), look = Vector3.new( 0.001,-0.000,  1.000)},
 		{pos = Vector3.new(-335.968, 14.655, -18.763), look = Vector3.new(-0.009,-0.000,  1.000)},
-		{pos = Vector3.new(-340.770, 21.894,   7.819), look = Vector3.new( 1.000, 0.000, -0.020)},
+		{pos = Vector3.new(-340.770, 18,        7.819), look = Vector3.new( 1.000, 0.000, -0.020)},
 		{pos = Vector3.new(-335.362, 14.655,  32.267), look = Vector3.new(-0.018, 0.000, -1.000)},
 		{pos = Vector3.new(-335.597, -5.310,  31.984), look = Vector3.new( 0.007,-0.000, -1.000)},
 		{pos = Vector3.new(-342.770, -4.545,   6.882), look = Vector3.new( 0.998, 0.000,  0.059)},
@@ -61,7 +61,7 @@ local BASE_POINTS = {
 	Base3 = {
 		{pos = Vector3.new(-335.056, -4.730,  88.361), look = Vector3.new(-0.053,-0.000,  0.999)},
 		{pos = Vector3.new(-335.484, 14.589,  88.365), look = Vector3.new( 0.009,-0.000,  1.000)},
-		{pos = Vector3.new(-340.686, 21.627, 113.545), look = Vector3.new( 0.996,-0.000,  0.091)},
+		{pos = Vector3.new(-340.686, 18,      113.545), look = Vector3.new( 0.996,-0.000,  0.091)},
 		{pos = Vector3.new(-334.037, 14.589, 138.982), look = Vector3.new( 0.016, 0.000, -1.000)},
 		{pos = Vector3.new(-334.729, -5.310, 138.934), look = Vector3.new(-0.018, 0.000, -1.000)},
 		{pos = Vector3.new(-342.976, -4.691, 114.290), look = Vector3.new( 1.000, 0.000, -0.003)},
@@ -69,19 +69,19 @@ local BASE_POINTS = {
 	Base4 = {
 		{pos = Vector3.new(-335.378, -5.310, 195.301), look = Vector3.new(-0.007, 0.000,  1.000)},
 		{pos = Vector3.new(-334.909, 14.589, 195.104), look = Vector3.new(-0.014,-0.000,  1.000)},
-		{pos = Vector3.new(-340.955, 21.747, 221.001), look = Vector3.new( 1.000, 0.000,  0.021)},
+		{pos = Vector3.new(-340.955, 18,      221.001), look = Vector3.new( 1.000, 0.000,  0.021)},
 		{pos = Vector3.new(-342.888, -4.610, 220.964), look = Vector3.new( 1.000, 0.000, -0.003)},
 	},
 	Base5 = {
 		{pos = Vector3.new(-484.222, -5.310, 195.304), look = Vector3.new( 0.028, 0.000,  1.000)},
 		{pos = Vector3.new(-484.333, 14.589, 195.090), look = Vector3.new(-0.021,-0.000,  1.000)},
-		{pos = Vector3.new(-478.365, 20.199, 220.752), look = Vector3.new(-1.000,-0.000,  0.006)},
+		{pos = Vector3.new(-478.365, 18,      220.752), look = Vector3.new(-1.000,-0.000,  0.006)},
 		{pos = Vector3.new(-476.401, -4.601, 220.614), look = Vector3.new(-1.000,-0.000,  0.019)},
 	},
 	Base6 = {
 		{pos = Vector3.new(-483.449, -5.310, 138.981), look = Vector3.new(-0.019,-0.000, -1.000)},
 		{pos = Vector3.new(-483.015, 14.655, 138.915), look = Vector3.new(-0.002,-0.000, -1.000)},
-		{pos = Vector3.new(-478.574, 21.702, 113.173), look = Vector3.new(-1.000,-0.000,  0.021)},
+		{pos = Vector3.new(-478.574, 18,      113.173), look = Vector3.new(-1.000,-0.000,  0.021)},
 		{pos = Vector3.new(-484.151, 14.655,  87.993), look = Vector3.new( 0.026,-0.000,  1.000)},
 		{pos = Vector3.new(-483.837, -5.310,  87.932), look = Vector3.new( 0.025, 0.000,  1.000)},
 		{pos = Vector3.new(-476.314, -4.545, 113.780), look = Vector3.new(-1.000, 0.000, -0.023)},
@@ -89,7 +89,7 @@ local BASE_POINTS = {
 	Base7 = {
 		{pos = Vector3.new(-483.090, -5.310,  32.215), look = Vector3.new(-0.027,-0.000, -1.000)},
 		{pos = Vector3.new(-483.202, 14.589,  32.072), look = Vector3.new( 0.027, 0.000, -1.000)},
-		{pos = Vector3.new(-478.055, 21.730,   6.638), look = Vector3.new(-1.000, 0.000, -0.004)},
+		{pos = Vector3.new(-478.055, 18,        6.638), look = Vector3.new(-1.000, 0.000, -0.004)},
 		{pos = Vector3.new(-483.909, 14.589, -19.057), look = Vector3.new(-0.008,-0.000,  1.000)},
 		{pos = Vector3.new(-482.949, -5.310, -19.079), look = Vector3.new(-0.025,-0.000,  1.000)},
 		{pos = Vector3.new(-476.441, -4.593,   6.513), look = Vector3.new(-1.000,-0.000,  0.006)},
@@ -97,7 +97,7 @@ local BASE_POINTS = {
 	Base8 = {
 		{pos = Vector3.new(-483.624, -5.310, -74.769), look = Vector3.new(-0.002, 0.000, -1.000)},
 		{pos = Vector3.new(-482.742, 14.655, -75.024), look = Vector3.new( 0.055, 0.000, -0.998)},
-		{pos = Vector3.new(-478.328, 21.657,-100.790), look = Vector3.new(-0.999,-0.000,  0.046)},
+		{pos = Vector3.new(-478.328, 18,     -100.790), look = Vector3.new(-0.999,-0.000,  0.046)},
 		{pos = Vector3.new(-476.109, -4.645,-100.723), look = Vector3.new(-1.000,-0.000, -0.002)},
 	},
 }
@@ -110,9 +110,7 @@ for baseName, list in pairs(BASE_POINTS) do
 		sum += e.pos
 		n += 1
 	end
-	if n > 0 then
-		BASE_CENTERS[baseName] = sum / n
-	end
+	if n > 0 then BASE_CENTERS[baseName] = sum / n end
 end
 
 local PLOT_TO_BASE = {}
@@ -135,8 +133,9 @@ local Config = {
 		BaseSpeed100      = 80,
 		WalkToBrainrotSpd = 50,
 		CloneDelay        = 0.03,
-		TpToBrainrotMode  = "Walk",
+		TpToBrainrotMode  = "Velocity",
 		FixPosTime        = 0.1,
+		TpWaitDelay       = 0.5,
 	},
 	TpAfterHit    = false,
 	AutoTpOnLoad  = false,
@@ -175,16 +174,14 @@ local function LoadConfig()
 		if readfile and isfile and isfile(SAVE_KEY .. ".json") then
 			local data = HttpService:JSONDecode(readfile(SAVE_KEY .. ".json"))
 			if data.TpSettings then
-				for k,v in pairs(data.TpSettings) do
-					Config.TpSettings[k] = v
-				end
+				for k,v in pairs(data.TpSettings) do Config.TpSettings[k] = v end
 			end
-			if data.TpAfterHit ~= nil then Config.TpAfterHit = data.TpAfterHit end
-			if data.AutoTpOnLoad ~= nil then Config.AutoTpOnLoad = data.AutoTpOnLoad end
-			if data.GuiScale ~= nil then Config.GuiScale = data.GuiScale end
-			if data.ToolChoice ~= nil then Config.ToolChoice = data.ToolChoice end
-			if data.TpSpeedIndex ~= nil then Config.TpSpeedIndex = data.TpSpeedIndex end
-			if data.TeleportV2 ~= nil then Config.TeleportV2 = data.TeleportV2 end
+			if data.TpAfterHit    ~= nil then Config.TpAfterHit    = data.TpAfterHit end
+			if data.AutoTpOnLoad  ~= nil then Config.AutoTpOnLoad  = data.AutoTpOnLoad end
+			if data.GuiScale      ~= nil then Config.GuiScale      = data.GuiScale end
+			if data.ToolChoice    ~= nil then Config.ToolChoice    = data.ToolChoice end
+			if data.TpSpeedIndex  ~= nil then Config.TpSpeedIndex  = data.TpSpeedIndex end
+			if data.TeleportV2    ~= nil then Config.TeleportV2    = data.TeleportV2 end
 			if data.GuiPos and data.GuiPos.ScaleX and data.GuiPos.ScaleY and data.GuiPos.OffsetX and data.GuiPos.OffsetY then
 				Config.GuiPos = UDim2.new(data.GuiPos.ScaleX, data.GuiPos.OffsetX, data.GuiPos.ScaleY, data.GuiPos.OffsetY)
 			end
@@ -193,9 +190,8 @@ local function LoadConfig()
 end
 
 LoadConfig()
-if not Config.TpSettings.FixPosTime then
-	Config.TpSettings.FixPosTime = 0.1
-end
+if not Config.TpSettings.FixPosTime then Config.TpSettings.FixPosTime = 0.1 end
+if not Config.TpSettings.TpWaitDelay then Config.TpSettings.TpWaitDelay = 0.5 end
 
 local function GetCurrentTpToolName()
 	local choice = Config.ToolChoice or "Grapple"
@@ -236,19 +232,13 @@ local function getPrioritySelected()
 				if animal and animal:IsA("Model") then
 					local name = animal.Name
 					local gen = 0
-					local okData, data = pcall(function()
-						return AnimalsData[name]
-					end)
+					local okData, data = pcall(function() return AnimalsData[name] end)
 					if okData and type(data) == "table" and data.Generation then
 						gen = tonumber(tostring(data.Generation)) or 0
 					end
 					if gen > bestGen then
 						bestGen = gen
-						bestSel = {
-							plot = plot.Name,
-							slot = tonumber(podium.Name),
-							petName = name,
-						}
+						bestSel = { plot = plot.Name, slot = tonumber(podium.Name), petName = name }
 					end
 				end
 			end
@@ -538,12 +528,27 @@ local function getBaseForPlot(plotName, brainPos)
 	if plotName and PLOT_TO_BASE[plotName] then
 		return PLOT_TO_BASE[plotName]
 	end
-	local bestName, bestDist
-	for baseName, center in pairs(BASE_CENTERS) do
-		local d = (Vector3.new(center.X, 0, center.Z) - Vector3.new(brainPos.X, 0, brainPos.Z)).Magnitude
-		if not bestDist or d < bestDist then
-			bestDist = d
-			bestName = baseName
+	local plots = Workspace:FindFirstChild("Plots")
+	if not plots then return nil end
+	local plot = plots:FindFirstChild(plotName)
+	if not plot then return nil end
+	local plotPos = plot:GetPivot().Position
+	local bestName
+	local minDist = math.huge
+	for baseName, pts in pairs(BASE_POINTS) do
+		local sumPos = Vector3.new(0, 0, 0)
+		local count = 0
+		for _, pt in ipairs(pts) do
+			sumPos += pt.pos
+			count += 1
+		end
+		if count > 0 then
+			local center = sumPos / count
+			local d = (center - plotPos).Magnitude
+			if d < minDist then
+				minDist = d
+				bestName = baseName
+			end
 		end
 	end
 	if plotName and bestName then
@@ -557,8 +562,7 @@ local function getBestBasePointInBase(brainBaseName, brainPos)
 	if not baseList then return nil end
 	local char = LP.Character
 	local hrp  = char and char:FindFirstChild("HumanoidRootPart")
-	local startPos = hrp and hrp.Position or brainPos
-
+	local playerPos = hrp and hrp.Position or brainPos
 	local minHeightDiff = math.huge
 	for _, entry in ipairs(baseList) do
 		local diff = math.abs(entry.pos.Y - brainPos.Y)
@@ -566,45 +570,24 @@ local function getBestBasePointInBase(brainBaseName, brainPos)
 			minHeightDiff = diff
 		end
 	end
-
 	local candidates = {}
 	for _, entry in ipairs(baseList) do
-		local yDiff = math.abs(entry.pos.Y - brainPos.Y)
-		if yDiff <= minHeightDiff + 1.5 then
-			local dx = brainPos.X - entry.pos.X
-			local dz = brainPos.Z - entry.pos.Z
-			local horiz = math.sqrt(dx*dx + dz*dz)
-			local nearScore = horiz + yDiff * 5
-			table.insert(candidates, {
-				entry = entry,
-				nearScore = nearScore,
-			})
+		if math.abs(entry.pos.Y - brainPos.Y) <= (minHeightDiff + 5) then
+			table.insert(candidates, entry)
 		end
 	end
 	if #candidates == 0 then
-		for _, entry in ipairs(baseList) do
-			table.insert(candidates, {
-				entry = entry,
-				nearScore = (brainPos - entry.pos).Magnitude,
-			})
+		candidates = baseList
+	end
+	local bestEntry
+	local minTravelDist = math.huge
+	for _, entry in ipairs(candidates) do
+		local distToPlayer = (entry.pos - playerPos).Magnitude
+		if distToPlayer < minTravelDist then
+			minTravelDist = distToPlayer
+			bestEntry = entry
 		end
 	end
-
-	table.sort(candidates, function(a,b)
-		return a.nearScore < b.nearScore
-	end)
-
-	local bestEntry, bestScore
-	local limit = math.min(6, #candidates)
-	for i = 1, limit do
-		local c = candidates[i]
-		local pd = estimatePathDistance(startPos, c.entry.pos)
-		if not bestScore or pd < bestScore then
-			bestScore = pd
-			bestEntry = c.entry
-		end
-	end
-
 	return bestEntry
 end
 
@@ -761,43 +744,61 @@ local function doCloneUnified()
 	return ok and success
 end
 
-local function fakeJumpAndDash(hrp)
-	local char = hrp and hrp.Parent
-	if not char then return end
-	local hum = char:FindFirstChildOfClass("Humanoid")
-	if not hum then return end
+local function performFinalFix(hrp, hum, destPos, facingDir)
+	if not hrp or not hrp.Parent then return end
+	local preStopDist = 1
+	local dashDist    = 2
+	local preStopPos = destPos - (facingDir.Unit * preStopDist)
+	local arriveDist = 0.5
+	local speed      = 150
+	local flying     = true
+	local conn
+	conn = RunService.Heartbeat:Connect(function()
+		if not hrp or not hrp.Parent then
+			flying = false
+			return
+		end
+		local diff = preStopPos - hrp.Position
+		if diff.Magnitude < arriveDist then
+			flying = false
+			return
+		end
+		hrp.AssemblyLinearVelocity = diff.Unit * speed
+	end)
+	while flying do task.wait() end
+	if conn then conn:Disconnect() end
 	vZeroLocal(hrp)
-	task.wait()
-	hum.Jump = true
-	task.wait(0.06)
-	local look = hrp.CFrame.LookVector
-	local dir = Vector3.new(look.X, 0, look.Z)
-	if dir.Magnitude < 0.01 then
-		dir = Vector3.new(0, 0, -1)
+	hrp.CFrame = CFrame.new(hrp.Position, hrp.Position + facingDir)
+	task.wait(0.02)
+	if hum then
+		hum:ChangeState(Enum.HumanoidStateType.Jumping)
 	end
-	dir = dir.Unit
-	local DASH_DIST = 3
-	local STEPS = 5
-	local stepSize = DASH_DIST / STEPS
-	for _ = 1, STEPS do
+	hrp.AssemblyLinearVelocity = Vector3.new(0, 55, 0)
+	task.wait(0.08)
+	local steps  = 12
+	local startP = hrp.Position
+	local targetP = startP + facingDir.Unit * dashDist
+	local diff = targetP - startP
+	for i = 1, steps do
 		if not hrp or not hrp.Parent then break end
-		local pos = hrp.Position
-		local newPos = pos + dir * stepSize
-		hrp.CFrame = CFrame.new(newPos, newPos + look)
+		local alpha = i / steps
+		local nextP = startP + (diff * alpha)
+		hrp.CFrame = CFrame.new(nextP, nextP + facingDir)
 		vZeroLocal(hrp)
-		task.wait(0.02)
+		task.wait(0.01)
 	end
-	softStabilizeHumanoid(hum)
+	hrp.CFrame = CFrame.new(targetP, targetP + facingDir)
+	vZeroLocal(hrp)
 end
 
 local function finalSnap(hrp, targetPos)
 	if not hrp or not hrp.Parent then return end
 	local char = hrp.Parent
 	local hum  = char and char:FindFirstChildOfClass("Humanoid")
-	local look = hrp.CFrame.LookVector
+	local cf   = hrp.CFrame
 	local baseTarget = Vector3.new(targetPos.X, targetPos.Y + 0.5, targetPos.Z)
 	vZeroLocal(hrp)
-	hrp.CFrame = CFrame.new(baseTarget, baseTarget + look)
+	hrp.CFrame = CFrame.new(baseTarget) * CFrame.fromMatrix(Vector3.new(), cf.RightVector, cf.UpVector, cf.LookVector)
 	vZeroLocal(hrp)
 	softStabilizeHumanoid(hum)
 end
@@ -831,7 +832,7 @@ local function velWalkTo(hrp, targetPos, walkSpeed)
 end
 
 local function getFrontOfBrainrot(hrp, brainPos)
-	local offsetDist = 11
+	local offsetDist = 3
 	local look = hrp and hrp.CFrame.LookVector or Vector3.new(0,0,-1)
 	local target = brainPos - look * offsetDist
 	if hrp then
@@ -845,7 +846,6 @@ end
 local function quickDoubleTpToBrainrot(sel)
 	local brainPos = getBrainrotPosUnified(sel)
 	if not brainPos then return end
-
 	for i = 1, 2 do
 		local char = LP.Character
 		local hrp  = char and char:FindFirstChild("HumanoidRootPart")
@@ -855,7 +855,8 @@ local function quickDoubleTpToBrainrot(sel)
 		vZeroLocal(hrp)
 		local pos = hrp.Position
 		local adjusted = Vector3.new(brainPos.X, pos.Y, brainPos.Z)
-		hrp.CFrame = CFrame.new(adjusted + Vector3.new(0,0.5,0))
+		local cf = hrp.CFrame
+		hrp.CFrame = CFrame.new(adjusted + Vector3.new(0,0.5,0)) * CFrame.fromMatrix(Vector3.new(), cf.RightVector, cf.UpVector, cf.LookVector)
 		vZeroLocal(hrp)
 		softStabilizeHumanoid(hum)
 		task.wait(0.3)
@@ -876,7 +877,7 @@ local function AfterClone_ThirdFloorAware(savedSel)
 	softStabilizeHumanoid(hum)
 	if isThirdFloor(brainPos) and ThirdFloorPlatform and ThirdFloorPlatform.CanCollide then
 		local airPos = Vector3.new(brainPos.X, brainPos.Y - 7.5, brainPos.Z)
-		local target = airPos - Vector3.new(0, 2, 0)
+		local target = airPos + Vector3.new(0, 2.5, 0)
 		local walkSpeed = Config.TpSettings.WalkToBrainrotSpd or 50
 		local done = false
 		local conn
@@ -946,8 +947,20 @@ local function instantVelocityTpToBrainrot(sel)
 	equipAnyCarpet()
 	vZeroLocal(hrp)
 	local pos = hrp.Position
-	local adjusted = Vector3.new(brainPos.X, pos.Y, brainPos.Z)
-	hrp.CFrame = CFrame.new(adjusted + Vector3.new(0,0.5,0))
+	local targetPos
+	if isThirdFloor(brainPos) and ThirdFloorPlatform and ThirdFloorPlatform.Parent then
+		local platformTopY = (brainPos.Y - 12) + (ThirdFloorPlatform.Size.Y * 0.5)
+		targetPos = Vector3.new(
+			ThirdFloorPlatform.Position.X,
+			platformTopY + 3,
+			ThirdFloorPlatform.Position.Z
+		)
+	else
+		targetPos = Vector3.new(brainPos.X, pos.Y, brainPos.Z)
+	end
+	local cf = hrp.CFrame
+	hrp.CFrame = CFrame.new(targetPos + Vector3.new(0,0.5,0)) 
+		* CFrame.fromMatrix(Vector3.new(), cf.RightVector, cf.UpVector, cf.LookVector)
 	vZeroLocal(hrp)
 	softStabilizeHumanoid(hum)
 end
@@ -980,9 +993,7 @@ local function fireGrappleOnceMouseFree()
 	local fakeTargetPos = hrp.Position + Vector3.new(0, -50, 0)
 	PlayerMouse.Hit    = { Position = fakeTargetPos }
 	PlayerMouse.Target = workspace.Terrain
-	local ok = pcall(function()
-		hook:Activate()
-	end)
+	local ok = pcall(function() hook:Activate() end)
 	return ok
 end
 
@@ -1014,11 +1025,7 @@ local function doGrappleHookThenCarpetMove(destPos, facingDir)
 		task.wait(0.02)
 	end
 	stopMove()
-	vZeroLocal(hrp)
-	task.wait()
-	hrp.CFrame = CFrame.new(destPos, destPos + facingDir)
-	vZeroLocal(hrp)
-	softStabilizeHumanoid(hum)
+	performFinalFix(hrp, hum, destPos, facingDir)
 	Config.ToolChoice = origChoice
 	SaveConfig()
 end
@@ -1088,21 +1095,18 @@ local function doVelocityTP()
 			task.wait(0.02)
 		end
 		stopMove()
-		vZeroLocal(hrp)
-		task.wait()
-		hrp.CFrame = CFrame.new(destPos, destPos + facingDir)
-		vZeroLocal(hrp)
-		softStabilizeHumanoid(hum)
+		performFinalFix(hrp, hum, destPos, facingDir)
 	end
-	fakeJumpAndDash(hrp)
-	softStabilizeHumanoid(hum)
+
 	_G.TPStatus = "at_base_before_clone"
+
 	local currentPos = hrp.Position
 	if (currentPos - destPos).Magnitude > 10 then
 		_G.TPStatus = "base_not_reached"
 		isTeleporting = false
 		return
 	end
+
 	local _ahrp = LP.Character and LP.Character:FindFirstChild("HumanoidRootPart")
 	local _ahum = LP.Character and LP.Character:FindFirstChildOfClass("Humanoid")
 	if _ahrp and _ahrp.Parent then
@@ -1113,20 +1117,21 @@ local function doVelocityTP()
 	task.wait(Config.TpSettings.CloneDelay or 0.03)
 	if _ahrp and _ahrp.Parent then pcall(function() _ahrp.Anchored = false end) end
 	softStabilizeHumanoid(_ahum)
+
 	local cloneOk = doCloneUnified()
 	if cloneOk then
-		task.wait(0.15)
+		local tpDelay = Config.TpSettings.TpWaitDelay or 0.5
+		tpDelay = math.clamp(tpDelay, 0.1, 0.9)
+		task.wait(tpDelay)
 		local chr = LP.Character
 		local cHrp = chr and chr:FindFirstChild("HumanoidRootPart")
 		local cHum = chr and chr:FindFirstChildOfClass("Humanoid")
-		if cHrp then
-			vZeroLocal(cHrp)
-		end
+		if cHrp then vZeroLocal(cHrp) end
 		softStabilizeHumanoid(cHum)
 		equipAnyCarpet()
-		local mode = (Config.TpSettings.TpToBrainrotMode or "Walk")
+		local mode = (Config.TpSettings.TpToBrainrotMode or "Velocity")
 		if mode == "Velocity" then
-			velocityTpToBrainrot(savedSel)
+			instantVelocityTpToBrainrot(savedSel)
 		elseif mode == "TP" then
 			quickDoubleTpToBrainrot(savedSel)
 		else
@@ -1136,6 +1141,7 @@ local function doVelocityTP()
 	else
 		_G.TPStatus = "clone_failed"
 	end
+
 	isTeleporting = false
 end
 
@@ -1719,9 +1725,15 @@ makeSliderSettings(SettingsGui, 208, "Fix Position Time", 0.01, 1,
 	function(v) return string.format("%.2fs", v) end
 )
 
+makeSliderSettings(SettingsGui, 248, "TP Wait Delay", 0.1, 0.9,
+	function() return Config.TpSettings.TpWaitDelay or 0.5 end,
+	function(v) Config.TpSettings.TpWaitDelay = v end,
+	function(v) return string.format("%.2fs", v) end
+)
+
 local BrainrotTpModeFrame = Instance.new("Frame")
 BrainrotTpModeFrame.Size = UDim2.new(0.9, 0, 0, 30)
-BrainrotTpModeFrame.Position = UDim2.new(0.05, 0, 0, 248)
+BrainrotTpModeFrame.Position = UDim2.new(0.05, 0, 0, 288)
 BrainrotTpModeFrame.BackgroundColor3 = Color3.fromRGB(16,16,20)
 BrainrotTpModeFrame.BorderSizePixel = 0
 BrainrotTpModeFrame.Parent = SettingsGui
@@ -1756,7 +1768,7 @@ VelBtn.Size = UDim2.new(0, 54, 0, 20)
 VelBtn.Position = UDim2.new(1, -60, 0.5, -10)
 VelBtn.BackgroundColor3 = Color3.fromRGB(35,35,40)
 VelBtn.BorderSizePixel = 0
-VelBtn.Text = "TP"
+VelBtn.Text = "Velocity"
 VelBtn.Font = Enum.Font.GothamBold
 VelBtn.TextSize = 10
 VelBtn.TextColor3 = Color3.fromRGB(180,180,190)
@@ -1765,9 +1777,9 @@ VelBtn.Parent = BrainrotTpModeFrame
 Instance.new("UICorner", VelBtn).CornerRadius = UDim.new(0,6)
 
 local function updateBrainrotTpModeUI()
-	local mode = Config.TpSettings.TpToBrainrotMode or "Walk"
-	if mode == "Velocity" or mode == "TP" then
-		Config.TpSettings.TpToBrainrotMode = "TP"
+	local mode = Config.TpSettings.TpToBrainrotMode or "Velocity"
+	if mode == "Velocity" then
+		Config.TpSettings.TpToBrainrotMode = "Velocity"
 		VelBtn.BackgroundColor3 = Color3.fromRGB(70,70,90)
 		VelBtn.TextColor3       = Color3.fromRGB(230,230,240)
 		WalkBtn.BackgroundColor3=Color3.fromRGB(35,35,40)
@@ -1789,7 +1801,7 @@ WalkBtn.MouseButton1Click:Connect(function()
 end)
 
 VelBtn.MouseButton1Click:Connect(function()
-	Config.TpSettings.TpToBrainrotMode = "TP"
+	Config.TpSettings.TpToBrainrotMode = "Velocity"
 	SaveConfig()
 	updateBrainrotTpModeUI()
 end)
